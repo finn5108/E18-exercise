@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Style Boxes</title>
+    <style>
+        body {
+            color: rgb(0, 0, 0);
+        }
+        
+        .box {
+            display: inline-block;
+            width: 10vw;
+            height: 10vw;
+            border: 3px solid silver;
+            margin: 7vw;
+            transition: all 1s;
+        }
+        /*********************/
+    </style>
+
+</head>
+
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+
+    <script>
+        const BOX1 = document.querySelector("#box1");
+        const BOX2 = document.querySelector("#box2");
+        const BOX3 = document.querySelector("#box3");
+        const BOX4 = document.querySelector("#box4");
+        
+        BOX1.addEventListener("mouseover", changeBox1);
+        BOX2.addEventListener("mouseover", changeBox2);
+        BOX3.addEventListener("mouseover", changeBox3);
+        BOX4.addEventListener("mouseover", changeBox4);
+        
+        function start() {
+            console.log("start kører");
+            
+            BOX1.style.backgroundColor = "red";
+            BOX2.style.backgroundColor = "green";
+            BOX3.style.backgroundColor = "blue";
+            BOX4.style.backgroundColor = "white";
+        }
+    
+        function changeBox1() {
+            console.log("changeBox1 kører");
+            
+            BOX1.style.backgroundColor = "cyan";
+            BOX1.style.transition = "4sec";
+        }
+
+        function changeBox2() {
+            console.log("changeBox2 kører");
+            
+            BOX2.style.backgroundColor = "magenta";
+            BOX2.style.transition = "4sec";
+        }
+
+        function changeBox3() {
+            console.log("changeBox3 kører");
+
+            BOX3.style.backgroundColor = "yellow";
+            BOX3.style.transition = "4sec";
+        }
+
+        function changeBox4() {
+            console.log("changeBox4 kører");
+
+            BOX4.style.backgroundColor = "black";
+            BOX4.style.transition = "4sec";
+        }
+
+        start();
+
+    </script>
+</body>
+
+</html>
