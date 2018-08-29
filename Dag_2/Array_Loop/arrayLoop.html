@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Array Loop</title>
+    <style>
+        body {
+            color: burlywood;
+        }
+        
+        #display {
+            background-color: black;
+            width: 20vw;
+            height: 20vw;
+            border: 1px solid silver;
+            margin: 7vw;
+            padding: 1vw;
+        }
+        /*********************/
+    </style>
+
+</head>
+
+<body>
+    <div id="display"></div>
+
+    <script>
+
+        const DISPLAY = document.querySelector("#display");
+
+        let soundTracks = ["Nummer 1", "Nummer 2", "Nummer 3", "Nummer 4"];
+        
+
+        // forEach loop.
+        soundTracks.forEach(soundTrack => {
+            DISPLAY.innerHTML += soundTrack + " :-(" + "<br/>";
+        });  
+        
+
+        // for loop.
+        for (let i = 0; i < soundTracks.length; i++) {
+            DISPLAY.innerHTML += soundTracks[i] + " :-)" + "<br/>";
+            console.log(soundTracks[i]);
+        };
+
+    </script>
+
+</body>
+
+</html>
+
+
